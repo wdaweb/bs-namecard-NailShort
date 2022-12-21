@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "微軟正黑體";
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 54px;
+    }
+
+    .row {
+      position: relative;
+    }
+
+    .row::before {
+      content: '';
+      width: 200px;
+      height: 200px;
+      background: url(./images/triangle-01.png);
+      filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.3));
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      display: none;
+    }
+
+    .row::after {
+      content: '';
+      width: 200px;
+      height: 200px;
+      background: url(./images/triangle-01.png);
+      filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.3));
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      transform: rotate(180deg);
+      display: none;
+    }
+
+    @media(min-width:540px) {
+      .row::after {
+        display: block;
+      }
+
+      .row::before {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+
+  <div class="container mb-3 shadow p-0 m-0" style="max-width: 800px;">
+    <div class="row g-0">
+      <div class="col-sm-4 bg-black d-flex justify-content-center align-items-center">
+        <img src="./images/nemo.png" class="img-fluid rounded-start " style="width: 250px;">
+      </div>
+      <div class="col-sm-8 p-5 d-flex justify-content-center align-items-center ">
+        <div class=" card-body d-flex justify-content-center align-items-center">
+          <div class="box">
+            <p>Finding Nemo</p>
+            <h1 class="fw-bold mb-0">Nemo</h1>
+            <p class="ls">華&nbsp; 特&nbsp; 迪&nbsp; 士&nbsp; 尼&nbsp; 影&nbsp; 片</p>
+            <br>
+            <p>
+              導演：安德魯·史丹頓&nbsp; |&nbsp; 副導：李·安克里治<br>
+              監製：葛拉罕·華特斯&nbsp; |&nbsp; 編劇：安德魯·史丹頓 <br>
+              製片商：華特迪士尼影片&nbsp; |&nbsp; 皮克斯動畫工作室 <br>
+              網站：https://disney.com.tw/
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
